@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Show Page for <%=song.name%></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/song">Songs Index</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Song Attributes</h2>
+      <ul>
+        <li>Name: <%=song.name%></li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="/songs/<%=song.id%>/edit">Edit</a>
+    </section>
+
+    <section>
+      <form action="/songs/<%=song.id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete Song</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

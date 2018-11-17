@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Singers</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/singers/new">Create a new Singer</a></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
+  <main>
+    <h2>List of Singers</h2>
+    <ul>
+      <% for (let i = 0; i < singers.length; i++){%>
+           <li><a href="/singers/<%=singers[i].id%>"><%=singers[i].name %></a></li>
+      <%}%>
+    </ul>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

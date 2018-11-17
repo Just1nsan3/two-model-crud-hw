@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Edit <%=singer.name%></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/singer">Singers Index</a></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
+  <main>
+    <h2>Singer attributes</h2>
+    <form action="/singers/<%=singer.id%>?_method=PUT" method="POST">
+      <input type="text" name="name" value="<%=singer.name%>"><br>
+      <button type="submit">Update Singer</button>
+    </form>
+  </main>
+</body>
+</html>

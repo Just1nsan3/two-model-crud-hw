@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Edit <%=song.name%></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/song">Songs Index</a></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
+  <main>
+    <h2>Song attributes</h2>
+    <form action="/song/<%=song.id%>?_method=PUT" method="POST">
+      <input type="text" name="name" value="<%=song.name%>"><br>
+      <button type="submit">Update Song</button>
+    </form>
+  </main>
+</body>
+</html>
